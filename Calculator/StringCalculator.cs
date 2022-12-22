@@ -12,7 +12,7 @@
             return SumElements(parameters);
         }
 
-        private int SumElements(List<int> values)
+        private static int SumElements(List<int> values)
         {
             var result = 0;
             values.ForEach(x =>
@@ -22,16 +22,8 @@
 
             return result;
         }
-        /*
-         ShouldThrowException_WhenNegativeNumbersPresent("//,\n-10,5,2","negatives not allowed:-10")
-   Source: StringCalculatorTests.cs line 75
-   Duration: 108 ms
 
-  Message: 
-  Expected: <System.ArgumentException> and property Message equal to "negatives not allowed:-10"
-  But was:  "Parameter // is not a number"
-         */
-        private List<int> ConvertParametersToNumbers(string input)
+        private static List<int> ConvertParametersToNumbers(string input)
         {
             var separators = new HashSet<string>() { ",", "\n" };
 

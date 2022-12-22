@@ -81,5 +81,11 @@ namespace StringCalculatorTests
                 .EqualTo(exceptionMessage));
         }
 
+        [Test]
+        public void ShouldThrowException_WhenNonNumberPassed()
+        {
+            Assert.That(() => _subject.Add("v"), Throws.TypeOf<ArgumentException>());
+        }
+
     }
 }
